@@ -1,0 +1,233 @@
+
+@media only screen and (min-width: 0){
+  #navbar{
+    display: none;
+  }
+  .lager-products-link{
+    li{
+      &:nth-of-type(1){
+        width: 100%;
+      }
+    }
+  }
+  .site-title{
+    padding: 1em 0 8em 0;
+  }
+  .square{
+    padding: 0 1em;
+  }
+  .rhombus{
+    padding: 0 0 2em 0;
+    transform: skew(0, -8deg);
+    .content{
+      font-size: 1.125em;
+      transform: skew(0, 8deg);
+      .rog-mobile{
+        top: -7em;
+        right: calc(50% - 180px);
+      }
+      div{
+        &:nth-of-type(2){
+          padding: 1em 0;
+        }
+      }
+    }
+  }
+  .obj{
+    display: none;
+  }
+  .get-gift{
+    flex-wrap: wrap;
+    dd{
+      hgroup{
+        h3{
+          font-size: 1.5em;
+          em{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .w-max-650{
+    font-size: 1.25em;
+  }
+  .gift-content{
+    flex-wrap: wrap;
+  }
+  .gift-description{
+    figure{
+      margin: 0 auto;
+      padding: 0 0 0.75em 0.5em;
+      float: unset;
+    }
+  }
+  .gift-group{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .winner-group{
+    flex-wrap: wrap;
+    dd{
+      max-width: unset;
+      width: 100%;
+      &:nth-of-type(1){
+        width: 100%;
+        figure{
+          text-align: center;
+          img{
+            max-width: 294px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    article{
+      span{
+        display: block;
+      }
+    }
+  }
+  .miyamoto-musashi{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 370px){
+  .winner-group{
+    dd{
+      width: unset;
+    }
+  }
+}
+
+@media only screen and (min-width: 410px){
+  .get-gift{
+    dd{
+      hgroup{
+        h3{
+          em{
+            display: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 520px){
+  .lager-products-link{
+    li{
+      &:nth-of-type(1){
+        width: initial;
+        max-width: 206px;
+      }
+    }
+  }
+  .site-title{
+    padding: 1em 1em 8em 1em;
+  }
+  .get-gift{
+    flex-wrap: unset;
+    dd{
+      hgroup{
+        h3{
+          font-size: 1.875em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 620px){
+  .gift-group{
+    flex-wrap: unset;
+    margin: unset;
+    max-width: unset;
+  }
+}
+
+// 桌面、手機的主要切換斷點。
+
+@media only screen and (min-width: 750px){
+  #navbar{
+    display: unset;
+  }
+  .square{
+    padding: 0 3em;
+  }
+  .rhombus{
+    padding: 0 1em 3em 1em;
+    transform: skew(0, -5deg);
+    .content{
+      font-size: 1.5em;
+      transform: skew(0, 5deg);
+      .rog-mobile{
+        top: -4em;
+        right: calc(50% - 450px);
+      }
+      div{
+        &:nth-of-type(2){
+          padding: unset;
+        }
+      }
+    }
+  }
+  .site-title{
+    padding: 1em 1em 2em 1em;
+  }
+  .obj{
+    display: unset;
+  }
+  .w-max-650{
+    font-size: 1.5em;
+  }
+  .gift-content{
+    flex-wrap: unset;
+  }
+  .gift-description{
+    figure{
+      margin: unset;
+      padding: 0 0 0em 0.5em;
+      float: right;
+    }
+  }
+  .gift-group{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .winner-group{
+    flex-wrap: unset;
+    dd{
+      max-width: 294px;
+      width: 100%;
+      &:nth-of-type(1){
+        figure{
+          width: unset;
+        }
+      }
+    }
+  }
+  .copyright{
+    article{
+      span{
+        display: unset;
+      }
+    }
+  }
+  .miyamoto-musashi{
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 1100px){
+  .gift-group{
+    flex-wrap: unset;
+    margin: unset;
+    max-width: unset;
+  }
+}

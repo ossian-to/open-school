@@ -1,0 +1,598 @@
+@charset "UTF-8";
+@import "initial";
+
+// 載入思源黑體，使用方式如下
+// font-family: 'Noto Sans TC', sans-serif;
+// font-weight: 900;
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap');
+
+*{
+  box-sizing: border-box;
+  transition: font-size 0.3s, padding 0.3s, top 0.3s, right 0.3s, width 0.3s, max-width 0.3s, border-radius 0.3s;
+}
+
+figure{
+  margin: 0;
+  padding: 0;
+}
+em{
+  font-style: normal;
+}
+
+.ossian{
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1920px;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  section{
+    position: relative;
+    padding: 0 1em;
+    z-index: 2;
+    &.no-padding{
+      position: relative;
+      padding: 0;
+      background-color: #774f40;
+      article{
+        position: relative;
+      }
+    }
+  }
+}
+
+// 宮本武藏
+
+.miyamoto-musashi{
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 350px);
+  width: 471px;
+  filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
+}
+
+// 網站標題
+
+.kv{
+  text-align: center;
+}
+.lager-products-link{
+  margin: 0;
+  padding: 5em 1.5em 0 1.5em;
+  list-style: none;
+  li{
+    display: inline-block;
+    &:nth-of-type(1){
+      a{
+        img{
+          width: 206px;
+        }
+      }
+    }
+    &:nth-of-type(2){
+      max-width: 111px;
+    }
+    &:nth-of-type(3){
+      max-width: 103px;
+    }
+    a{
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+.site-title{
+  margin: 0 auto;
+  max-width: 721px;
+  img,source{
+    width: 100%;
+  }
+}
+
+/* 背景方形 */
+.square{
+  // padding: 0 3em;
+  background-color: #dc0bad;
+}
+/* 前景菱形 */
+.rhombus{
+  background-color: #ff16cb;
+  .content{
+    position: relative;
+    padding: 0 1em 1em 1em;
+    // font-size: 1.5em;
+    text-align: center;
+    line-height: 1.35;
+    .sub-title{
+      text-align: center;
+      transform: translateY(-2em);
+    }
+    .rog-mobile{
+      position: absolute;
+      // top: -4em;
+      // right: calc(50% - 500px);
+    }
+    em{
+      color: black;
+      &.yellow{
+        color: #fff359;
+      }
+    }
+    mark{
+      color: yellow;
+      background-color: #550042;
+      animation: point 1s infinite;
+    }
+  }
+}
+
+@keyframes point {
+  0%{
+    color: yellow;
+    background-color: #550042;
+  }
+  50%{
+    color: #550042;
+    background-color: yellow;
+  }
+  100%{
+    color: yellow;
+    background-color: #550042;
+  }
+}
+
+.sub-title-base{
+  padding: 1em;
+  text-align: center;
+}
+
+.rog-mobile-2{
+  margin: 0 auto;
+  padding: 3em 1em;
+  max-width: 466px;
+  a{
+    img{
+      width: 100%;
+      transition: transform 0.3s;
+    }
+    &:hover{
+      img{
+        transform: rotate(10deg);
+      }
+    }
+  }
+}
+
+// 分隔線
+.break-line{
+  background-color: #774f40;
+  background-image: url(../images/break.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+// 獎勵說明
+
+.gift-content{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em;
+  margin: 0;
+  padding: 0 0 5em 0;
+  dd{
+    margin: 0;
+    padding: 2em 1em;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    background-color: #774f40;
+    border: 3px dashed #ff16cb;
+    border-radius: 1.25em;
+  }
+}
+
+.gift-group{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 0;
+  padding: 1em 0 0 0;
+  list-style: none;
+  li{
+    padding: 1em 0;
+    width: 120px;
+    text-align: center;
+    background-color: #5f3f33;
+    border-radius: 0.625em;
+    box-shadow: 1px 1px 0 #8d5e4c, 1px 1px 0 #482e25 inset;
+    figure{
+      position: relative;
+      margin: 0 auto;
+      width: 40px;
+      // '贈'的icon
+      &::before{
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 28px;
+        height: 28px;
+        background-image: url(../images/icons/gift-icon-1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      // 調整'送'的icon
+      &.icon-get{
+        &::before{
+          background-image: url(../images/icons/gift-icon-2.png);
+        }
+      }
+    }
+    h4{
+      margin: 0;
+      padding: 0.75em 0 0 0;
+    }
+    .number{
+      font-family: 'Arial Black',Arial, Helvetica, sans-serif;
+      color:#ff16cb;
+      em{
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+.gift-description{
+  margin: 0 auto;
+  padding-top: 1em;
+  max-width: 500px;
+  width: 100%;
+  font-size: 1.25em;
+  line-height: 1.35;
+  text-align: left;
+  figure{
+    // margin: 0 auto;
+    // padding: 0 0 0 0.5em;
+    // float: right;
+    max-width: 130px;
+    img{
+      width: 100%;
+    }
+  }
+  em{
+    color: #fff359;
+  }
+  .gift-point{
+    padding-left: 1.25em;
+    color: #fff359;
+    span{
+      color: white;
+      mark{
+        color: #cdfeff;
+        background-color: #5f3f33;
+        animation: change 1s infinite;
+      }
+    }
+  }
+}
+
+@keyframes change {
+  0%{
+    color: #cdfeff;
+    background-color: #5f3f33;
+  }
+  50%{
+    color: #fff359;
+    background-color: #ff16cb;
+  }
+  100%{
+    color: #cdfeff;
+    background-color: #5f3f33;
+  }
+}
+
+// 童話、天外加碼禮
+.get-gift{
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  dd{
+    margin: 0;
+    padding: 1.5em 1em;
+    width: 100%;
+    text-align: center;
+    background-color: #4d2f24;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    border-radius: 1.25em;
+    border: 3px dashed #ff16cb;
+    &:nth-of-type(1){
+      // 兔耳小蘿莉
+      background-image: url(../images/bg-obj-1.png);
+    }
+    &:nth-of-type(2){
+      // 宮本武藏
+      background-image: url(../images/bg-obj-2.png);
+    }
+    figure{
+      margin: 0 auto;
+      max-width: 188px;
+      img{
+        width: 100%;
+      }
+    }
+    hgroup{
+      padding: 1em 0;
+      h3,h6{
+        margin: 0;
+        padding: 0;
+      }
+      h3{
+        padding-bottom: 0.35em;
+        // font-size: 1.875em;
+        em{
+          color: #fff359;
+        }
+      }
+      h6{
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+// 虛寶群組
+.icon-group{
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li{
+    position: relative;
+    width: 40px;
+    &.question{
+      cursor: pointer;
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/icons/gift-icon-3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: jump 1s infinite;
+      }
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+
+@keyframes jump {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.25);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+// 注意事項
+
+.import-note-zone{
+  background-color: #4d2f24;
+  article{
+    padding: 1em 0 2em 0;
+  }
+}
+.import-note{
+  margin: 0;
+  padding: 0 0 0 1.25em;
+  color: #fff359;
+  line-height: 2;
+  text-align: justify;
+  li{
+    span{
+      color: white;
+      mark{
+        color: #fff359;
+        background-color: #774f40;
+      }
+      a{
+        color: #fff359;
+      }
+    }
+  }
+}
+
+// 版權資訊
+.copyright{
+  color: #774f40;
+  text-align: center;
+  background-color: #331d15;
+  article{
+    padding: 2em 1em;
+    span{
+      em{
+        color: #a56852;
+      }
+    }
+  }
+}
+
+// ScrollSpy 導覽列
+
+#navbar{
+  position: fixed;
+  top: 40%;
+  right: 0;
+  z-index: 5;
+  ul{
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+    text-align: right;
+    width: 110px;
+    background-color: white;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    li{
+      a{
+        display: block;
+        padding: 0.5em 0;
+        color: #482e25;
+        text-decoration: none;
+        &:hover{
+          padding-right: 0.5em;
+          color: #ff16cb;
+        }
+      }
+    }
+  }
+}
+
+.obj{
+  position: absolute;
+  z-index: 1;
+  // 兔子
+  &.obj-1{
+    top: 26.5em;
+    left: calc(50% - 450px);
+  }
+  // 阿達古
+  &.obj-2{
+    top: 37em;
+    left: calc(50% - 400px);
+  }
+  // 兔耳小蘿莉
+  &.obj-3{
+    top: 15.75em;
+    left: calc(50% + 230px);
+  }
+}
+
+// POPUP 彈跳對話框
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+  .modal-content {
+    position: relative;
+    top: 50%;
+    margin: auto;
+    padding: 20px;
+    max-width: 500px;
+    font-size: 1.25em;
+    line-height: 1.45;
+    background-color: #ff16cb;
+    border-radius: 1.25em;
+    transform: translateY(-80%);
+    transition: transform 0.3s ease-in-out;
+    em{
+      color: #fff359;
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0.35em;
+      font-size: 28px;
+      font-weight: bold;
+      transition: transform 1s;
+      cursor: pointer;
+      &:hover{
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+// 得獎名單
+
+.w-max-650{
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 650px;
+  // font-size: 1.5em;
+  line-height: 1.35;
+  text-align: center;
+  em{
+    color: #fff359;
+  }
+}
+
+.winner-group{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 0;
+  padding: 1em;
+  dd{
+    margin: 0;
+    padding: 0;
+    h3{
+      margin: 0;
+      padding: 0.25em;
+      font-size: 1.5em;
+      text-align: center;
+      color:#fff359;
+      background-color: #4d2f24;
+    }
+  }
+  .winners{
+    margin: 0;
+    padding: 0.25em 0 0 0;
+    list-style: none;
+    li{
+      padding: 0.5em 0;
+      border-bottom: 1px solid #4d2f24;
+      &:nth-last-child(1){
+        border-bottom: unset;
+      }
+    }
+  }
+}
+
+// POPUP 
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-in .modal-content{
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+// RWD 自適應設定
+
+@import "rwd";
