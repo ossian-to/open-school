@@ -1548,17 +1548,31 @@ em {
   color: #fff359;
   background-color: #4d2f24;
 }
+.winner-group dd h4 {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: #ff9ee9;
+  background-color: #906454;
+  border-bottom: 1px solid #4d2f24;
+}
 .winner-group .winners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0.25em 0 0 0;
   list-style: none;
 }
 .winner-group .winners li {
-  padding: 0.5em 0;
+  padding: 0.5em 0 0.5em 1em;
+  width: 50%;
   border-bottom: 1px solid #4d2f24;
-}
-.winner-group .winners li:nth-last-child(1) {
-  border-bottom: unset;
+  background-image: url(../images/flag.png);
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .buy {
